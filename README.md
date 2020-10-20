@@ -1,5 +1,4 @@
 # bash
-# bash
 
 Make Your Directory Rom
 
