@@ -2,10 +2,10 @@
 
 Make Your Directory Rom
 
-For Example (arrow-10.0) :
+For Example (nos-10) :
 
 ```bash
-    mkdir arrow-10.0
+    mkdir nos-10
 ```
 
 Clone This Repo
@@ -18,13 +18,13 @@ Clone This Repo
 Run Bash
 
 ```bash
-    bash bash-sh/arrow-10.0.sh
+    bash bash-sh/nos-10.sh
 ```
 
 If you want to edit
 
 ```bash
-    nano bash-sh/arrow-10.0.sh
+    nano bash-sh/nos-10.sh
 ```
 
 
