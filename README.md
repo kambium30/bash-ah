@@ -2,10 +2,10 @@
 
 Make Your Directory Rom
 
-For Example (nos-10) :
+For Example (carbon) :
 
 ```bash
-    mkdir nos-10
+    mkdir carbon
 ```
 
 Clone This Repo
@@ -18,13 +18,13 @@ Clone This Repo
 Run Bash
 
 ```bash
-    bash bash-sh/nos-10.sh
+    bash bash-sh/carbon.sh
 ```
 
 If you want to edit
 
 ```bash
-    nano bash-sh/nos-10.sh
+    nano bash-sh/carbon.sh
 ```
 
 
