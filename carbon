@@ -2,7 +2,7 @@
 cd ~/carbon
 
 # Sync Repo
-repo init -u https://github.com/CarbonROM/android.git -b cr-8.0
+repo init -u https://github.com/CarbonROM/android.git -b cr-9.0
 repo sync -j8
 
 # Hapus Out
@@ -14,13 +14,16 @@ rm -rf device/xiaomi/santoni
 rm -rf kernel/xiaomi/msm8937
 rm -rf vendor/xiaomi
 
+# Hapus Qcom Power
+rm -rf vendor/qcom/opensource/power
+
 # Hapus Toolclain
 rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
-git clone https://github.com/kambium30/device_xiaomi_santoni -b carbon-10 device/xiaomi/santoni
-git clone https://github.com/Wikidepia/kernel_xiaomi_santoni-4.9 -b main kernel/xiaomi/msm8937
-git clone https://github.com/kambium30/vendor_xiaomi_santoni -b carbon-10 vendor/xiaomi/
+git clone https://github.com/kambium30/android_device_xiaomi_santoni-1 -b cr-9.0 device/xiaomi/santoni
+git clone https://github.com/zhantech/android_kernel_xiaomi_santoni.git -b luuvy-4.9 kernel/xiaomi/msm8937
+git clone https://github.com/zhantech/vendor_xiaomi_santoni -b nad-11 vendor/xiaomi/
 
 # Clone Toolclain
 git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host/linux-x86/clang-12
@@ -29,8 +32,12 @@ git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host
 export USE_CCACHE=1
 ccache -M 150G
 
+# Fix Hotspot
+rm -rf hardware/qcom-caf/wlan
+git clone https://github.com/SakilMondal/android_hardware_qcom-caf_wlan -b lineage-18.0 hardware/qcom-caf/wlan
+
 # Build Rom
 . build/envsetup.sh
 lunch
-9
 make carbon -j12
+
