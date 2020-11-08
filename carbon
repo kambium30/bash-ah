@@ -39,5 +39,6 @@ git clone https://github.com/SakilMondal/android_hardware_qcom-caf_wlan -b linea
 # Build Rom
 . build/envsetup.sh
 lunch
+export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ubuntu"
 make carbon -j12
 
