@@ -32,5 +32,5 @@ ccache -M 150G
 # Build Rom
 . build/envsetup.sh
 lunch
-export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ubuntu"
+export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
 make carbon -j12
