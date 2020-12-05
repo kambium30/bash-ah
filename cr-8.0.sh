@@ -18,7 +18,7 @@ rm -rf vendor/xiaomi
 rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
-git clone https://github.com/kambium30/device_xiaomi_santoni -b carbon-10 device/xiaomi/santoni
+git clone https://github.com/kambium30/device_xiaomi_santoni-1 -b cr-8.0 device/xiaomi/santoni
 git clone https://github.com/MrArtemSid/GameOver -b R kernel/xiaomi/msm8937
 git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-8.0 vendor/xiaomi/
 
