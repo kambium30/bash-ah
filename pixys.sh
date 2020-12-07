@@ -1,10 +1,10 @@
 
 # Buka Directory
-cd ~/fluid
+cd ~/pixys
 
 # Sync Repo
-repo init -u https://github.com/Project-Fluid/manifest.git -b fluid-10
-repo sync --force-sync --no-tags --no-clone-bundle -j$(nproc --all)
+repo init -u https://github.com/PixysOS/manifest -b ten
+repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune -j$(nproc --all)
 
 # Hapus Out
 rm -rf out
@@ -19,7 +19,7 @@ rm -rf vendor/xiaomi
 rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
-git clone https://github.com/kambium30/device_xiaomi_santoni -b fluid device/xiaomi/santoni
+git clone https://github.com/kambium30/device_xiaomi_santoni -b pixys device/xiaomi/santoni
 git clone https://github.com/zhantech/android_kernel_xiaomi_santoni -b luuvy-4.9 kernel/xiaomi/msm8937
 git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-8.0 vendor/xiaomi/
 
@@ -32,8 +32,9 @@ ccache -M 150G
 
 # Build Rom
 . build/envsetup.sh
+lunch pixys_santoni-userdebug
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
-brunch santoni
+make pixys -j12
 
 
 
