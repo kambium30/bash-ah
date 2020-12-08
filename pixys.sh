@@ -4,7 +4,7 @@ cd ~/pixys
 
 # Sync Repo
 repo init -u https://github.com/PixysOS/manifest -b ten
-repo sync  --force-sync --current-branch --no-tags --no-clone-bundle --optimized-fetch --prune -j$(nproc --all)
+repo sync
 
 # Hapus Out
 rm -rf out
