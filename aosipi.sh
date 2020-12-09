@@ -1,9 +1,9 @@
 # Buka Directory
-cd ~/aosip
+cd ~/aosipi
 
 # Sync Repo
 repo init -u git://github.com/AOSiP/platform_manifest.git -b ten
-repo sync 
+repo sync --force-sync --no-tags --no-clone-bundle
 
 # Hapus Out
 rm -rf out
