@@ -1,5 +1,5 @@
 # Buka Directory
-cd ~/aosipi
+cd ~/aosip
 
 # Sync Repo
 repo init -u git://github.com/AOSiP/platform_manifest.git -b ten
