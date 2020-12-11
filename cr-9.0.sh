@@ -23,7 +23,7 @@ rm -rf prebuilts/clang/host/linux-x86/clang-12
 # Clone Tree
 git clone https://github.com/kambium30/android_device_xiaomi_santoni-1 -b cr-9.0 device/xiaomi/santoni
 git clone https://github.com/MrArtemSid/GameOver -b R kernel/xiaomi/msm8937
-git clone https://github.com/zhantech/vendor_xiaomi_santoni -b nad-11 vendor/xiaomi/
+git clone https://github.com/Bikram557/android_vendor_xiaomi_santoni -b eleven vendor/xiaomi/
 
 # Clone Toolclain
 git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host/linux-x86/clang-12
