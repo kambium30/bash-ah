@@ -1,6 +1,6 @@
 
 # Buka Directory
-cd ~/lineage
+cd ~/roms/lineage
 
 # Sync Repo
 repo init -u git://github.com/LineageOS/android.git -b lineage-17.1
