@@ -20,7 +20,8 @@ rm -rf prebuilts/clang/host/linux-x86/clang-12
 # Clone Tree
 git clone https://github.com/kambium30/device_xiaomi_santoni -b du device/xiaomi/santoni
 git clone https://github.com/MrArtemSid/GameOver -b testing kernel/xiaomi/msm8937
-git clone https://github.com/kambium30/android_vendor_du -b q10x vendor/xiaomi/santoni
+git clone https://github.com/kambium30/android_vendor_du -b q10x vendor/xiaomi/
+git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-8.0 vendor/xiaomi/santoni
 
 # Clone Toolclain
 git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host/linux-x86/clang-12
@@ -32,6 +33,6 @@ ccache -M 150G
 # Build Rom
 . build/envsetup.sh
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ubuntu"
-lunch santoni
+breakfast santoni
 mka bacon
 
