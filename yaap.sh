@@ -1,9 +1,9 @@
 # Buka Directory
-cd ~/cr-9.0
+cd ~/yaap
 
 # Sync Repo
-repo init -u https://github.com/CarbonROM/android.git -b cr-9.0
-repo sync -j8
+repo init -u git://github.com/yaap/manifest.git -b eleven
+repo sync -j$(nproc --all) --no-tags --no-clone-bundle
 
 # Hapus Out
 rm -rf out
@@ -21,9 +21,9 @@ rm -rf vendor/qcom/opensource/power
 rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
-git clone https://github.com/kambium30/android_device_xiaomi_santoni-1 -b cr-9.0 device/xiaomi/santoni
-git clone https://github.com/MrArtemSid/GameOver -b R kernel/xiaomi/msm8937
-git clone https://github.com/Bikram557/android_vendor_xiaomi_santoni -b eleven vendor/xiaomi/
+git clone https://github.com/kambium30/android_device_xiaomi_santoni-1 -b yaap device/xiaomi/santoni
+git clone https://github.com/zhantech/android_kernel_xiaomi_santoni -b luuvy-4.9 kernel/xiaomi/msm8937
+git clone https://github.com/zhantech/vendor_xiaomi_santoni -b nad-11 vendor/xiaomi/
 
 # Clone Toolclain
 git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host/linux-x86/clang-12
@@ -38,7 +38,7 @@ git clone https://github.com/SakilMondal/android_hardware_qcom-caf_wlan -b linea
 
 # Build Rom
 . build/envsetup.sh
-lunch
-export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ubuntu"
-make carbon -j12
+export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
+lunch yaap_santoni-userdebug
+make yaap -j12
 
