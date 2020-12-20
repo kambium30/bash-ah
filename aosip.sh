@@ -19,7 +19,7 @@ rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
 git clone https://github.com/kambium30/device_xiaomi_santoni -b aosip device/xiaomi/santoni
-git clone https://github.com/MrArtemSid/GameOver -b testing kernel/xiaomi/msm8937
+git clone https://github.com/zhantech/android_kernel_xiaomi_santoni -b luuvy-4.9 kernel/xiaomi/msm8937
 git clone https://github.com/Bikram557/android_vendor_xiaomi_santoni -b ten vendor/xiaomi/
 
 # Clone Toolclain
