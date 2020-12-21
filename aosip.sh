@@ -3,7 +3,7 @@ cd ~/aosip
 
 # Sync Repo
 repo init -u git://github.com/AOSiP/platform_manifest.git -b ten
-repo sync --force-sync --no-tags --no-clone-bundle
+repo sync -j8
 
 # Hapus Out
 rm -rf out
