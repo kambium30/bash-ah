@@ -1,9 +1,9 @@
 # Buka Directory
-cd ~/yaap
+cd ~/aosip-11
 
 # Sync Repo
-repo init -u git://github.com/yaap/manifest.git -b eleven
-repo sync -j$(nproc --all) --no-tags --no-clone-bundle
+repo init -u git://github.com/AOSiP/platform_manifest.git -b eleven
+repo sync --force-sync --no-tags --no-clone-bundle
 
 # Hapus Out
 rm -rf out
@@ -21,7 +21,7 @@ rm -rf vendor/qcom/opensource/power
 rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
-git clone https://github.com/kambium30/android_device_xiaomi_santoni-1 -b yaap device/xiaomi/santoni
+git clone https://github.com/kambium30/android_device_xiaomi_santoni -b aosip-11 device/xiaomi/santoni
 git clone https://github.com/zhantech/android_kernel_xiaomi_santoni -b luuvy-4.9 kernel/xiaomi/msm8937
 git clone https://github.com/zhantech/vendor_xiaomi_santoni -b nad-11 vendor/xiaomi/
 
@@ -37,8 +37,8 @@ rm -rf hardware/qcom-caf/wlan
 git clone https://github.com/SakilMondal/android_hardware_qcom-caf_wlan -b lineage-18.0 hardware/qcom-caf/wlan
 
 # Build Rom
-. build/envsetup.sh
+source build/envsetup.sh
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
-lunch yaap_santoni-userdebug
-make yaap -j12
+lunch aosip_santoni-userdebug
+time m kronic
 
