@@ -1,9 +1,9 @@
 # Buka Directory
-cd ~/du
+cd ~/mokee
 
 # Sync Repo
-repo init -u https://github.com/DirtyUnicorns/android_manifest.git -b q10x
-repo sync --force-sync -j$( nproc --all )
+repo init -u https://github.com/MoKee/android.git -b mkq-mr1
+repo sync
 
 # Hapus Out
 rm -rf out
@@ -18,10 +18,10 @@ rm -rf vendor/xiaomi/santoni
 rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
-git clone https://github.com/kambium30/device_xiaomi_santoni -b du device/xiaomi/santoni
-git clone https://github.com/MrArtemSid/GameOver -b testing kernel/xiaomi/msm8937
-git clone https://github.com/kambium30/android_vendor_du -b q10x vendor/xiaomi/
-git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-8.0 vendor/xiaomi/santoni
+git clone https://github.com/kambium30/device_xiaomi_santoni -b mokee device/xiaomi/santoni
+git clone https://github.com/zhantech/android_kernel_xiaomi_santoni -b luuvy-4.9 kernel/xiaomi/msm8937
+git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-8.0-backup vendor/xiaomi/
+
 
 # Clone Toolclain
 git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host/linux-x86/clang-12
@@ -33,6 +33,6 @@ ccache -M 150G
 # Build Rom
 . build/envsetup.sh
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ubuntu"
-breakfast santoni
+lunch
 mka bacon
 
