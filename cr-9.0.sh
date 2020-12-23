@@ -1,5 +1,5 @@
 # Buka Directory
-cd ~/nad-11
+cd ~/cr-9.0
 rm -rf .repo/local_manifests
 
 # Fix Hals
@@ -14,8 +14,8 @@ rm -rf device/qcom/sepolicy-legacy-um
 rm -rf system/bt
 
 # Sync Repo
-repo init -u ssh://git@github.com/Nusantara-ROM/android.git -b 11
-repo sync --force-sync --no-tags --no-clone-bundle
+repo init -u https://github.com/CarbonROM/android.git -b cr-9.0
+repo sync -j8
 
 # Hapus Out
 rm -rf out
@@ -33,7 +33,7 @@ rm -rf vendor/qcom/opensource/power
 rm -rf prebuilts/clang/host/linux-x86/clang-r399163b
 
 # Clone Tree
-git clone https://github.com/zhantech/android_device_xiaomi_santoni.git -b nad-11 device/xiaomi/santoni
+git clone https://github.com/kambium30/android_device_xiaomi_santoni -b cr-9.0 device/xiaomi/santoni
 git clone https://github.com/zeta96/L_check_msm-4.9.git -b wip kernel/xiaomi/msm8937
 git clone https://github.com/zhantech/vendor_xiaomi_santoni.git -b nad-11 vendor/xiaomi/
 
@@ -64,6 +64,6 @@ git clone https://github.com/Jabiyeff/android_system_bt -b lineage-18.0 system/b
 
 # Build Rom
 . build/envsetup.sh
-lunch nad_santoni-userdebug
-export KBUILD_BUILD_USER="ZHANtech™"; export KBUILD_BUILD_HOST="batikholic"
-mka nad -j30
+lunch 
+export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
+makecarbon -j12
