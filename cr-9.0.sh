@@ -66,4 +66,4 @@ git clone https://github.com/Jabiyeff/android_system_bt -b lineage-18.0 system/b
 . build/envsetup.sh
 lunch 
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
-makecarbon -j12
+make carbon -j12
