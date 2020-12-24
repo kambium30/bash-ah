@@ -12,7 +12,7 @@ Clone This Repo
 
 
 ```bash
-    git clone https://github.com/kambium30/bash.git -b master bash-sh
+    git clone https://github.com/kambium30/bashah.git -b master bash-sh
 ```
 
 Run Bash
