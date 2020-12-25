@@ -2,7 +2,7 @@
 cd ~/aex
 
 # Sync Repo
-repo init --depth=1 -u git://github.com/AospExtended/manifest.git -b 10.x
+repo init -u git://github.com/AospExtended/manifest.git -b 10.x
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 # Hapus Out
