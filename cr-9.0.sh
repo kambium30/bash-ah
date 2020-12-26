@@ -3,7 +3,7 @@ cd ~/cr-9.0
 
 # Sync Repo
 repo init -u https://github.com/CarbonROM/android.git -b cr-9.0
-repo sync -ji
+repo sync -j8
 
 # Hapus Out
 rm -rf out
@@ -37,7 +37,7 @@ rm -rf hardware/qcom-caf/wlan
 git clone https://github.com/SakilMondal/android_hardware_qcom-caf_wlan -b lineage-18.0 hardware/qcom-caf/wlan
 
 # Build Rom
-build/envsetup.sh
+. build/envsetup.sh
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
 lunch
 make carbon -j12
