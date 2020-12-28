@@ -18,15 +18,15 @@ rm -rf vendor/xiaomi
 rm -rf vendor/qcom/opensource/power
 
 # Hapus Toolclain
-rm -rf prebuilts/clang/host/linux-x86/clang-12
+rm -rf prebuilts/clang/host/linux-x86/clang-11
 
 # Clone Tree
 git clone https://github.com/kambium30/android_device_xiaomi_santoni -b cr-9.0 device/xiaomi/santoni
 git clone https://github.com/MrArtemSid/android_kernel_xiaomi_santoni_msm4.9 -b R-caf kernel/xiaomi/msm8937
-git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-8.0-backup vendor/xiaomi/
+git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-9.0-backup vendor/xiaomi/
 
 # Clone Toolclain
-git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host/linux-x86/clang-12
+git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host/linux-x86/clang-11
 
 # Use Cache
 export USE_CCACHE=1
