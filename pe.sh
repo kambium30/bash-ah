@@ -1,8 +1,8 @@
 # Buka Directory
-cd ~/aex
+cd ~/pe
 
 # Sync Repo
-repo init -u git://github.com/AospExtended/manifest.git -b 10.x
+repo init -u https://github.com/PixelExperience/manifest -b ten-plus
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 # Hapus Out
@@ -18,7 +18,7 @@ rm -rf vendor/xiaomi
 rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
-git clone https://github.com/kambium30/device_xiaomi_santoni -b aex device/xiaomi/santoni
+git clone https://github.com/kambium30/device_xiaomi_santoni -b pe device/xiaomi/santoni
 git clone https://github.com/zhantech/android_kernel_xiaomi_santoni -b luuvy-4.9 kernel/xiaomi/msm8937
 git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-8.0-backup vendor/xiaomi/
 
@@ -33,4 +33,4 @@ ccache -M 150G
 . build/envsetup.sh
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
 lunch aosp_santoni-userdebug
-mka aex -j$(nproc --all) | tee log.txt
+mka bacon -j12
