@@ -30,7 +30,7 @@ rm -rf vendor/xiaomi
 rm -rf vendor/qcom/opensource/power
 
 # Hapus Toolclain
-rm -rf prebuilts/clang/host/linux-x86/clang-12
+rm -rf prebuilts/clang/host/linux-x86/clang-12.0
 
 # Clone Tree
 git clone https://github.com/kambium30/device-santoni -b cr-9.0 device/xiaomi/santoni
@@ -38,7 +38,7 @@ git clone https://github.com/zeta96/L_check_msm-4.9.git -b wip kernel/xiaomi/msm
 git clone https://github.com/kambium30/vendor-santoni -b 11.0 vendor/xiaomi/
 
 # Clone Toolclain
-git clone https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6875598 --depth=1 prebuilts/clang/host/linux-x86/clang-r399163b
+git clone https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-12.0 --depth=1 prebuilts/clang/host/linux-86/clang-63b
 
 # Use Cache
 export USE_CCACHE=1
