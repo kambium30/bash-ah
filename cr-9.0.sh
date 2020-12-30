@@ -1,5 +1,5 @@
 # Buka Directory
-cd ~/cr
+cd ~/cr-9.0
 rm -rf .repo/local_manifests
 
 # Fix Hals
