@@ -1,5 +1,5 @@
 # Buka Directory
-cd ~/cr-9.0
+cd ~/cr-900
 
 # Sync Repo
 repo init -u https://github.com/CarbonROM/android.git -b cr-9.0
