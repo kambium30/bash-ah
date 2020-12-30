@@ -1,9 +1,9 @@
 # Buka Directory
-cd ~/pe
+cd ~/cr
 
 # Sync Repo
-repo init -u https://github.com/PixelExperience/manifest -b ten-plus
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+repo init -u https://github.com/CarbonROM/android.git -b cr-9.0
+repo sync -j8
 
 # Hapus Out
 rm -rf out
@@ -18,7 +18,7 @@ rm -rf vendor/xiaomi
 rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
-git clone https://github.com/kambium30/device_xiaomi_santoni -b pe device/xiaomi/santoni
+git clone https://github.com/kambium30/device-santoni -b cr-9.0 device/xiaomi/santoni
 git clone https://github.com/zhantech/android_kernel_xiaomi_santoni -b luuvy-4.9 kernel/xiaomi/msm8937
 git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-8.0-backup vendor/xiaomi/
 
@@ -32,5 +32,5 @@ ccache -M 150G
 # Build Rom
 . build/envsetup.sh
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
-lunch aosp_santoni-userdebug
-mka bacon -j12
+lunch
+make carbon -j12
