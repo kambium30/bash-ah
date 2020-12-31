@@ -38,7 +38,7 @@ git clone https://github.com/zeta96/L_check_msm-4.9.git -b wip kernel/xiaomi/msm
 git clone https://github.com/kambium30/vendor-santoni -b 11.0 vendor/xiaomi/
 
 # Clone Toolclain
-git clone https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-12.0 --depth=1 prebuilts/clang/host/linux-86/clang-12.0
+git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host/linux-x86/clang-12
 
 # Use Cache
 export USE_CCACHE=1
