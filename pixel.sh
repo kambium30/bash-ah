@@ -1,9 +1,9 @@
 # Buka Directory
-cd ~/aosip
+cd ~/pixel
 
 # Sync Repo
-repo init -u git://github.com/AOSiP/platform_manifest.git -b ten
-repo sync -j8
+repo init -u https://github.com/PixelExperience/manifest -b ten-plus
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
 # Hapus Out
 rm -rf out
@@ -18,7 +18,7 @@ rm -rf vendor/xiaomi
 rm -rf prebuilts/clang/host/linux-x86/clang-12
 
 # Clone Tree
-git clone https://github.com/kambium30/device_xiaomi_santoni -b aosip device/xiaomi/santoni
+git clone https://github.com/kambium30/device_xiaomi_santoni -b pe device/xiaomi/santoni
 git clone https://github.com/zhantech/android_kernel_xiaomi_santoni -b luuvy-4.9 kernel/xiaomi/msm8937
 git clone https://github.com/kambium30/vendor_xiaomi_santoni -b cr-8.0-backup vendor/xiaomi/
 
@@ -30,7 +30,7 @@ export USE_CCACHE=1
 ccache -M 150G
 
 # Build Rom
-source build/envsetup.sh
-lunch aosip_santoni-userdebug
+. build/envsetup.sh
+lunch aosp_santoni-userdebug
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
-time m kronic
+mka bacon -j12
