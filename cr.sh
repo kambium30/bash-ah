@@ -29,6 +29,13 @@ git clone https://github.com/kdrag0n/proton-clang --depth=1 prebuilts/clang/host
 export USE_CCACHE=1
 ccache -M 150G
 
+# Custom
+rm -rf device/qcom/sepolicy-legacy-um
+rm -rf system/bt
+git clone https://github.com/Jabiyeff/android_device_qcom_sepolicy -b lineage-18.0-legacy-um device/qcom/sepolicy-legacy-um
+git clone https://github.com/Jabiyeff/android_system_bt -b lineage-18.0 system/bt
+
+
 # Build Rom
 . build/envsetup.sh
 export KBUILD_BUILD_USER="kambium30"; export KBUILD_BUILD_HOST="ruyo"
